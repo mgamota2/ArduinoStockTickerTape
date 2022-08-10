@@ -4,13 +4,12 @@ import serial
 import threading
 import time
 
+#Mute pandas future warning from yahoo_fin API
 warnings.filterwarnings("ignore", category=FutureWarning) 
 
-stocks =[]
+#Put the stock names that you want in the stocks list
+stocks =['TSLA']
 
-stocks.append('CYTH')
-stocks.append('PEAK')
-stocks.append('STAG')
 
 ser = serial.Serial('COM3',9600, timeout=10)
 
